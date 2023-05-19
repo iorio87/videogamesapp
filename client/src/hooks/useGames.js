@@ -13,5 +13,5 @@ export function useGames() {
     // }, []);
     console.log(data);
   
-    return {data}
+    return {data, isLoading}
   }

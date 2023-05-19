@@ -1,16 +1,11 @@
+import Games from "./components/Games";
 import { useGames } from "./hooks/useGames";
 
 function App() {
-  const { data } = useGames();
+  const { isLoading } = useGames();
   return (
-    <main className="bg-gray-900 text-white">
-      
-        <ul className="text-center">
-          {data?.map((game) => (
-            <li key={game.id}>{game.name}</li>
-          ))}
-        </ul>
-      
+    <main className="bg-gray-900 text-white min-h-screen">
+      {isLoading ? <h1 className="text-center">Loading...</h1> : <Games />}
     </main>
   );
 }
