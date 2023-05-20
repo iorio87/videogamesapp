@@ -6,9 +6,8 @@ function Games() {
 
   return (
     <ul className="text-center grid grid-cols-3 gap-2">
-      {data?.map((game) => (
-        //<li key={game.id}>{game.name}</li>
-        <GameCard name={game.name}/>
+      {data?.map((game) => (        
+        <GameCard name={game.name} id={game.id}/>
       ))}
     </ul>
   );
